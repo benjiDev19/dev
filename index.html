@@ -9,7 +9,7 @@
     The path provided below has to start and end with a slash "/" in order for
     it to work correctly.
   -->
-    <base href="/dev/">
+    <base href="$FLUTTER_BASE_HREF">
 
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -334,7 +334,7 @@
             }
         }, 500);
 
-         if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator) {
                 // Service workers are supported. Use them.
                 window.addEventListener('load', function() {
                     // Wait for registration to finish before dropping the <script> tag.
@@ -376,7 +376,7 @@
                             );
                             loadMainDartJs();
                         }
-                    }, 4000);
+                    }, 6000);
                 });
             } else {
                 // Service workers not supported. Just drop the <script> tag.
@@ -404,7 +404,7 @@
                     loadingIndicator.style.opacity = '0';
                     setTimeout(() => {
                         loadingIndicator.style.display = 'none';
-                    }, 700);
+                    }, 1000);
                 }
             });
 
@@ -415,7 +415,7 @@
                     loadingIndicator.style.opacity = '0';
                     setTimeout(() => {
                         loadingIndicator.style.display = 'none';
-                    }, 700);
+                    }, 1000);
                 }
             }, 8000);
         });
